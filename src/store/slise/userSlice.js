@@ -14,7 +14,7 @@ const userSlice = createSlice({
     },
     updateUserNameInput(state, action) {
       state.userNameInput = action.payload
-    }
+    },
   },
 })
 

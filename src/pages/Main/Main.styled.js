@@ -5,84 +5,129 @@ const maxMobileWidth = '890px'
 const maxMobileWidthThree = '1158px'
 
 export const Wrapper = styled.div`
-  width: 100%;
-  min-height: 100%;
-  overflow: hidden;
-  background-color: #f1f1f1;
   display: flex;
   flex-direction: column;
+  align-items: center;
 `
-export const Container = styled.div`
-  max-width: 1440px;
-  width: 100%;
-  margin: 0 auto;
-  background-color: #ffffff;
-  height: 100vh;
-
-  @media screen and (max-width: ${maxMobileWidthTwo}) {
-    width: 100%;
-    min-width: 320px;
-  }
+export const Form = styled.form`
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
 `
 
-export const Main = styled.main``
-
-export const MainContainer = styled.div`
-  max-width: 1178px;
-  margin: 0 auto;
-  padding: 52px 10px 37px;
-  @media screen and (max-width: ${maxMobileWidthTwo}) {
-    padding: 85px 10px 84px;
-  }
-`
-export const MainH2 = styled.h2`
+export const Button = styled.button`
+  width: 100px;
+  height: 30px;
+  background-color: #7f00ff;
+  border-radius: 6px;
+  color: #fff;
+  border: 0;
+  font-size: 20px;
   font-style: normal;
-  // font-weight: 500;
-  font-size: 40px;
-  line-height: 42px;
-  color: #000000;
-  margin-bottom: 30px;
-  &:hover::before {
-    border-top: 2px solid #0080c1;
-    border-left: 2px solid #0080c1;
-  }
-
-  @media screen and (max-width: ${maxMobileWidthTwo}) {
-    display: flex;
-    align-items: flex-start;
-    margin-left: 15px;
-    font-size: 24px;
-    line-height: 29px;
-    color: #000000;
-    margin-bottom: 20px;
-    position: relative;
-  }
-`
-export const MainContent = styled.div`
-  width: 100%;
-  height: 100%;
-  margin: 0 auto;
-
-  @media screen and (max-width: ${maxMobileWidthTwo}) {
-    width: 100%;
-    margin: 0 auto;
+  margin-left: 20px;
+  animation: vibrate-1 0.5s linear infinite both;
+  @keyframes vibrate-1 {
+    0% {
+      transform: translate(0);
+    }
+    20% {
+      transform: translate(-1px, 1px);
+    }
+    40% {
+      transform: translate(-1px, -1px);
+    }
+    60% {
+      transform: translate(1px, 1px);
+    }
+    80% {
+      transform: translate(1px, -1px);
+    }
+    100% {
+      transform: translate(0);
+    }
   }
 `
 
+export const Input = styled.input`
+  width: 300px;
+  height: 30px;
+  border-radius: 6px;
+`
+export const ButtonAscDesc = styled.button`
+  width: 180px;
+  height: 30px;
+  // background-color: ${(props) => (props.isActive ? '#ae05fc' : '#7f00ff')};
+  background-color: #7f00ff;
+  border-radius: 6px;
+  color: #fff;
+  border: 0;
+  font-size: 20px;
+  font-style: normal;
+  &.active {
+    background-color: #ae05fc;
+  }
+  &:hover {
+    transform: scale(1.2);
+    transition: transform 0.3s ease;
+  }
+`
+
+export const ButtonBlock = styled.div`
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+`
+export const PaginButton = styled.div`
+  display: flex;
+  justify-content: center;
+  padding-bottom: 40px;
+  gap: 5px;
+  &:hover {
+    transform: scale(1.2);
+    transition: transform 0.3s ease;
+  }
+`
+
+export const Message = styled.div`
+  display: flex;
+  color: red;
+  // height: 50px;
+  // margin-top: 5px;
+  color: #7f00ff;
+  // font-family: Roboto;
+  font-size: 18px;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: center;
+`
+export const ButtonNumber = styled.button`
+  background-color: #77edfc;
+  height: 35px;
+  width: 35px;
+  border-radius: 4px;
+  &.active {
+    background-color: #7f00ff;
+  }
+  &:hover {
+    transform: scale(1.2);
+    transition: transform 0.3s ease;
+  }
+`
 export const ContentCards = styled.div`
-  max-width: 1158px;
+  max-width: 100vh;
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(4, 270px);
-  grid-auto-rows: 441px;
+  grid-template-columns: repeat(5, 150px);
+  // grid-auto-rows: 320px;
   grid-gap: 40px 26px;
   justify-content: center;
-  overflow-y: auto;
+  // overflow-y: auto;
   scrollbar-color: #ffffff #2e2e2e;
   scrollbar-width: thin;
   scrollbar-width: 0px;
-  padding-bottom: 300px;
-  max-height: 100vh;
+  padding-bottom: 40px;
+  // max-height: 100vh;
 
   &::-webkit-scrollbar {
     width: 0px;
@@ -96,18 +141,18 @@ export const ContentCards = styled.div`
 
   @media screen and (max-width: ${maxMobileWidth}) {
     display: grid;
-    grid-template-columns: repeat(2, 270px);
+    grid-template-columns: repeat(2, 100px);
   }
 
   @media screen and (max-width: ${maxMobileWidthThree}) {
     display: grid;
-    grid-template-columns: repeat(3, 270px);
+    grid-template-columns: repeat(3, 150px);
   }
 
   @media screen and (max-width: ${maxMobileWidthTwo}) {
     display: grid;
     grid-template-columns: repeat(2, 157px);
-    grid-auto-rows: 320px;
+    grid-auto-rows: 190px;
     grid-gap: 10px 10px;
     justify-content: center;
     // height: 596px;
