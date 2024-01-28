@@ -8,5 +8,5 @@ export default configureStore({
     [Api.reducerPath]: Api.reducer,
   },
   middleware: (getDefaultMiddleware) =>
-  getDefaultMiddleware().concat(Api.middleware),
+    getDefaultMiddleware().concat(Api.middleware),
 })
