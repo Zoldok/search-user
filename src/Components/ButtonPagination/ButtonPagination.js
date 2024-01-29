@@ -1,3 +1,4 @@
+import React from 'react';
 import * as S from './ButtonPagination.styled'
 
 export const renderButtons = (data, pages, setPages) => {

@@ -10,10 +10,6 @@ import { findUser, updateUserNameInput } from '../../store/slise/userSlice'
 import { useSelector } from 'react-redux'
 import { renderButtons } from '../../Components/ButtonPagination/ButtonPagination'
 
-//TODO:
-//ReadMe
-//поставить свой значок вместо реакта
-
 export const Main = () => {
   const dispatch = useDispatch()
   const users = useSelector((state) => state.users.users)
@@ -107,7 +103,9 @@ export const Main = () => {
           onChange={handleInputChange}
           placeholder="Введите логин пользователя"
         />
-        <S.Button onClick={handleSubmit}>Найти</S.Button>
+        <S.Button onClick={handleSubmit} disabled={isLoading}>
+          {isLoading ? 'Ищем' : 'Найти'}
+        </S.Button>
         <br />
       </S.Form>
 
