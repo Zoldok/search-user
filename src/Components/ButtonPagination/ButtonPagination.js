@@ -7,9 +7,9 @@ export const renderButtons = (data, pages, setPages) => {
   
     const visibleButtons = 5
     const ellipsisStart = (
-      <S.ButtonNumber key="ellipsis-start">...</S.ButtonNumber>
+      <S.DivN key="ellipsis-start">...</S.DivN>
     )
-    const ellipsisEnd = <S.ButtonNumber key="ellipsis-end">...</S.ButtonNumber>
+    const ellipsisEnd = <S.DivN key="ellipsis-end">...</S.DivN>
 
     if (buttonCount <= visibleButtons) {
       for (let i = 1; i <= buttonCount; i++) {
