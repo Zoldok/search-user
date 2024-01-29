@@ -9,6 +9,8 @@ export const CardUser = () => {
   const [isModalOpen, setIsModalOpen] = useState(false)
 
   if (!users || !users.items) return <div></div>
+  if (users.total_count === 0)
+    return <>Пользователи не наидены, попробуй изменить запрос</>
 
   const openModal = (user) => {
     setSelectedUser(user)

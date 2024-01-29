@@ -2,11 +2,9 @@ import { useGetUserDataQuery } from '../../store/service/Service'
 import * as S from './ModalStyle'
 
 export const Modal = ({ onClose, user }) => {
-  console.log('data is modal', user)
+
   const userName = user.login
   const { data } = useGetUserDataQuery(userName)
-  console.log('djn jyb', data)
-
   const herf = data?.html_url
 
   if (!data) return <>Load</>
@@ -14,7 +12,7 @@ export const Modal = ({ onClose, user }) => {
     <S.ModalOverlay>
       <S.ModalContent>
         <S.NameDiv>
-          <h2>Пользователь {user?.login}</h2>
+          <S.UserName>Пользователь: {user?.login}</S.UserName>
         </S.NameDiv>
         <S.ModalBtnClose onClick={onClose}>
           <S.ModalBtnCloseLine></S.ModalBtnCloseLine>
