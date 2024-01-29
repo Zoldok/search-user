@@ -14,3 +14,9 @@ export const ButtonNumber = styled.button`
     transition: transform 0.3s ease;
   }
 `
+
+export const DivN = styled.div`
+    font-size: 30px;
+    display: flex;
+    align-items: flex-end;
+`
