@@ -1,8 +1,6 @@
 import styled from 'styled-components'
 
 const maxMobileWidthTwo = '620px'
-const maxMobileWidth = '890px'
-const maxMobileWidthThree = '1158px'
 
 export const Wrapper = styled.div`
   display: flex;
@@ -13,6 +11,12 @@ export const Form = styled.form`
   margin-top: 50px;
   display: flex;
   justify-content: center;
+
+  @media screen and (max-width: ${maxMobileWidthTwo}) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 `
 
 export const Button = styled.button`
@@ -46,17 +50,21 @@ export const Button = styled.button`
       transform: translate(0);
     }
   }
+
+  @media screen and (max-width: ${maxMobileWidthTwo}) {
+margin-top: 20px;
+  }
 `
 
 export const Input = styled.input`
   width: 300px;
   height: 30px;
   border-radius: 6px;
+  padding-left: 10px;
 `
 export const ButtonAscDesc = styled.button`
   width: 180px;
   height: 30px;
-  // background-color: ${(props) => (props.isActive ? '#ae05fc' : '#7f00ff')};
   background-color: #7f00ff;
   border-radius: 6px;
   color: #fff;
@@ -74,9 +82,16 @@ export const ButtonAscDesc = styled.button`
 
 export const ButtonBlock = styled.div`
   margin-top: 20px;
+  margin-bottom: 30px;
   display: flex;
   justify-content: center;
   gap: 40px;
+
+  @media screen and (max-width: ${maxMobileWidthTwo}) {
+    margin-top: 10px;
+    flex-direction: column;
+    gap: 20px;
+      }
 `
 export const PaginButton = styled.div`
   display: flex;
@@ -92,42 +107,22 @@ export const PaginButton = styled.div`
 export const Message = styled.div`
   display: flex;
   color: red;
-  // height: 50px;
-  // margin-top: 5px;
   color: #7f00ff;
-  // font-family: Roboto;
   font-size: 18px;
   flex-wrap: nowrap;
   flex-direction: column;
   justify-content: center;
 `
-export const ButtonNumber = styled.button`
-  background-color: #77edfc;
-  height: 35px;
-  width: 35px;
-  border-radius: 4px;
-  &.active {
-    background-color: #7f00ff;
-  }
-  &:hover {
-    transform: scale(1.2);
-    transition: transform 0.3s ease;
-  }
-`
+
 export const ContentCards = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   max-width: 100vh;
   width: 100%;
-  display: grid;
-  grid-template-columns: repeat(5, 150px);
-  // grid-auto-rows: 320px;
   grid-gap: 40px 26px;
   justify-content: center;
-  // overflow-y: auto;
-  scrollbar-color: #ffffff #2e2e2e;
-  scrollbar-width: thin;
-  scrollbar-width: 0px;
   padding-bottom: 40px;
-  // max-height: 100vh;
 
   &::-webkit-scrollbar {
     width: 0px;
@@ -139,22 +134,4 @@ export const ContentCards = styled.div`
     border-radius: 3px;
   }
 
-  @media screen and (max-width: ${maxMobileWidth}) {
-    display: grid;
-    grid-template-columns: repeat(2, 100px);
-  }
-
-  @media screen and (max-width: ${maxMobileWidthThree}) {
-    display: grid;
-    grid-template-columns: repeat(3, 150px);
-  }
-
-  @media screen and (max-width: ${maxMobileWidthTwo}) {
-    display: grid;
-    grid-template-columns: repeat(2, 157px);
-    grid-auto-rows: 190px;
-    grid-gap: 10px 10px;
-    justify-content: center;
-    // height: 596px;
-  }
 `

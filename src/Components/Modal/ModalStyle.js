@@ -24,7 +24,9 @@ position: relative;
     flex-direction: column;
     align-items: center;
 `
-
+export const UserName = styled.h2`
+text-align: center;
+`
 export const Herf = styled.a`
 font-size: 22px;
 color: white;
