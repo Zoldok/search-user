@@ -44,3 +44,6 @@ npm run start
 ```bash
 npm run test
 ```
+# Деплой проекта
+
+https://classy-squirrel-c88e57.netlify.app/
