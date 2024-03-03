@@ -110,21 +110,21 @@ export const Main = () => {
       </S.Form>
 
       <S.ButtonBlock>
-        <S.ButtonAscDesc
+        <S.ButtonAsc
           onClick={handleAscButtonClick}
           className={activeButton === 'ascending' ? 'active' : ''}
           data-isactive={activeButton === 'ascending'}
         >
           по возрастанию
-        </S.ButtonAscDesc>
+        </S.ButtonAsc>
 
-        <S.ButtonAscDesc
+        <S.ButtonDesc
           onClick={handleDescButtonClick}
           className={activeButton === 'descending' ? 'active' : ''}
           data-isactive={activeButton === 'descending'}
         >
           по убыванию
-        </S.ButtonAscDesc>
+        </S.ButtonDesc>
       </S.ButtonBlock>
       <S.PaginButton> {renderButtons(data, pages, setPages)}</S.PaginButton>
       {message && <S.Message>{message}</S.Message>}
