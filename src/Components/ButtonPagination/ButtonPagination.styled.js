@@ -1,13 +1,14 @@
 import { styled } from 'styled-components'
 
 export const ButtonNumber = styled.button`
-  background-color: #77edfc;
+  background-color: #787979;;
   height: 35px;
   width: 35px;
-  border-radius: 4px;
+  color: white;
+  border-radius: 3px;
   font-size: 20px;
   &.active {
-    background-color: #7f00ff;
+    background-color: rgb(65 65 65);;
   }
   &:hover {
     transform: scale(1.2);
