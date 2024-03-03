@@ -40,6 +40,7 @@ npm run start
     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" width="40" height="40"/>&nbsp;
 </div>
 
+
 # Для запуска теста
 ```bash
 npm run test
@@ -47,3 +48,5 @@ npm run test
 # Деплой проекта
 
 https://classy-squirrel-c88e57.netlify.app/
+
+![Безымянный](https://github.com/Zoldok/search-user/assets/129782617/66f651aa-95f0-4bdf-b0fe-626f9df93fde)
